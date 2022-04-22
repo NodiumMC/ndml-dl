@@ -7,6 +7,14 @@
   "author": "LIMPIX31",
   "license": "MIT",
   "types": "./lib/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodiumMC/ndml-dl.git"
+  },
+  "homepage": "https://github.com/NodiumMC/ndml-dl",
+  "bugs": {
+    "url": "https://github.com/NodiumMC/ndml-dl/issues"
+  },
   "files": [
     "lib/**/*"
   ],
