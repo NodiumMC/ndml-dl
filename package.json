@@ -15,7 +15,7 @@
     "build:esm": "yarn build:script --format=esm --outfile=./lib/index.mjs",
     "build": "tsc && yarn build:cjs && yarn build:esm",
     "prepare": "yarn build",
-    "version": "yarn format && git add -A src",
+    "version": "yarn format && git add -A",
     "postversion": "git push && git push --tags",
     "format": "prettier --write \"*.ts\""
   },
