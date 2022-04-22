@@ -6,6 +6,7 @@
   "module": "lib/index.mjs",
   "author": "LIMPIX31",
   "license": "MIT",
+  "types": "./lib/types/index.d.ts",
   "files": [
     "lib/**/*"
   ],
