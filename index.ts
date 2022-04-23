@@ -57,7 +57,7 @@ export class ProgressDownload extends TypedEmitter<ProgressDownloadEvents> {
           this.emit('progress', {
             progress: expectedSize,
             chunk: expectedSize,
-            total: expectedSize
+            total: expectedSize,
           })
           return resolve()
         }
@@ -66,7 +66,7 @@ export class ProgressDownload extends TypedEmitter<ProgressDownloadEvents> {
           responseType: 'stream',
           timeout: this.timeout,
           httpAgent: this.httpAgent,
-          httpsAgent: this.httpsAgent
+          httpsAgent: this.httpsAgent,
         })
         const totalLength = contentLengthHeader(headers)
         const writer = fs.createWriteStream(savePath)
@@ -75,7 +75,7 @@ export class ProgressDownload extends TypedEmitter<ProgressDownloadEvents> {
           this.emit('progress', {
             progress: this.progress,
             chunk: chunk.length,
-            total: totalLength
+            total: totalLength,
           })
           if (this.progress >= totalLength) resolve()
         })
@@ -95,9 +95,9 @@ export class ProgressDownload extends TypedEmitter<ProgressDownloadEvents> {
 const contentLengthHeader = (headers: Record<string, any>) => {
   return +(
     headers[
-    Object.keys(headers).find(v => v.includes('content-length')) ||
-    'content-length'
-      ] ?? 0
+      Object.keys(headers).find(v => v.includes('content-length')) ||
+        'content-length'
+    ] ?? 0
   )
 }
 

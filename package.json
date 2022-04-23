@@ -1,6 +1,6 @@
 {
   "name": "@ndml/dl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Downloader for ndml",
   "main": "lib/index.js",
   "author": "LIMPIX31",
